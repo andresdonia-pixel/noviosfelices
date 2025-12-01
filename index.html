@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés y Melisa | Boda Septiembre 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ESTILOS GENERALES Y RESETS */
+        :root {
+            --color-principal: #384F41; /* Verde Oliva Oscuro, elegante */
+            --color-acento: #CDB78C; /* Dorado Suave / Beige */
+            --color-fondo: #FFFFFF;
+            --color-texto: #333333;
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-fondo);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            color: var(--color-principal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: var(--color-acento);
+            text-decoration: none;
+        }
+        
+        /* SECCIÓN PRINCIPAL (LANDING) */
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/1200/800?random=1') no-repeat center center/cover; /* Reemplazar con una foto de Andrés y Melisa */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            font-family: var(--font-serif);
+            margin-top: 0;
+        }
+
+        .fecha {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 15px;
+            color: var(--color-acento);
+        }
+
+        /* SECCIONES DE CONTENIDO */
+        .section {
+            padding: 60px 5%;
+            margin-bottom: 20px;
+        }
+
+        .section-light {
+            background-color: #f9f9f9;
+        }
+
+        .section-dark {
+            background-color: var(--color-principal);
+            color: white;
+        }
+
+        .section-dark h2, .section-dark h3 {
+            color: white;
+        }
+        
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .story-point {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--color-acento);
+        }
+
+        .story-point h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+        
+        /* BOTONES Y LLAMADAS A LA ACCIÓN */
+        .btn {
+            display: inline-block;
+            background-color: var(--color-acento);
+            color: white !important;
+            padding: 10px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--color-principal);
+        }
+
+        /* CONTADOR REGRESIVO (Básico) */
+        #countdown {
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 20px;
+            color: var(--color-acento);
+        }
+        
+        /* RSVP IFRAME (Diseño para Google Forms o Typeform) */
+        .rsvp-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .rsvp-container iframe {
+            width: 100%;
+            height: 600px; /* Ajusta esta altura según sea necesario */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        
+        /* FOOTER */
+        .footer {
+            background-color: var(--color-texto);
+            color: white;
+            padding: 30px 5%;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries para Responsive Design (móviles) */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3rem;
+            }
+            .header p {
+                font-size: 1.2rem;
+            }
+            #countdown {
+                font-size: 1.5rem;
+            }
+            .section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <p>¡Por Fin, el Sí!</p>
+        <h1>Andrés & Melisa</h1>
+        <div class="fecha">Septiembre 2026</div>
+        
+        <p id="countdown">Cargando...</p>
+    </div>
+
+    <div class="section section-light">
+        <h2>Nuestro Viaje: De Instagram a Ezeiza</h2>
+        <div class="story-container">
+            <div class="story-point">
+                <h3>El Cruce Digital</h3>
+                <p>Nuestra historia comenzó con un "me gusta" y se convirtió en noches enteras de charlas que cruzaron el hemisferio. El chat era largo, la conexión inmediata, y la promesa de un encuentro cada vez más fuerte.</p>
+            </div>
+            <div class="story-point">
+                <h3>El Ramo de Chipá (21/09/2022)</h3>
+                <p>Andrés aterrizó en Ezeiza sin imaginar la sorpresa que lo esperaba. Melisa estaba ahí. Un flechazo de película, pero con un toque muy nuestro: en lugar de flores, Melisa me entregó un **ramo de chipá**. En ese instante, supimos que esta historia sería única, deliciosa y real.</p>
+            </div>
+            <div class="story-point">
+                <h3>El Flechazo Perpetuo</h3>
+                <p>Desde ese 21 de septiembre, nuestras vidas se entrelazaron. Cada día ha sido un capítulo de aventuras, risas y confirmaciones de que el destino, efectivamente, nos había esperado en una sala de arribos. Por eso, elegimos Septiembre de 2026 para cerrar el círculo, celebrando nuestro amor en alusión al día en que todo cambió.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>El Gran Día</h2>
+        <div style="max-width: 600px; margin: 0 auto; display: flex; justify-content: space-around;">
+            <div>
+                <h3>Ceremonia</h3>
+                <p>**[Nombre del Lugar de la Ceremonia]**</p>
+                <p>Hora: 17:00 hs.</p>
+                <p>[Dirección corta]</p>
+            </div>
+            <div>
+                <h3>Recepción</h3>
+                <p>**[Nombre del Salón de Fiestas]**</p>
+                <p>Hora: 19:00 hs.</p>
+                <p>[Dirección corta]</p>
+            </div>
+        </div>
+        <a href="https://support.google.com/maps/answer/3092445?hl=es&co=GENIE.Platform%3DDesktop" target="_blank" class="btn">Ver Ubicación en el Mapa</a>
+    </div>
+    
+    <div class="section section-light">
+        <h2>¡Confirma tu Asistencia!</h2>
+        <p>Por favor, ayúdanos a planificar la celebración confirmando tu presencia y la de tus acompañantes antes del **[Fecha Límite - Ejemplo: 15 de Agosto de 2026]**.</p>
+        
+        <div class="rsvp-container">
+            <iframe src="[AQUÍ VA EL ENLACE PÚBLICO DEL FORMULARIO DE GOOGLE FORMS]" frameborder="0" style="width:100%; height:600px; border:0;" allowfullscreen></iframe>
+            <p>Si tienes problemas con el formulario, escríbenos a [Tu Email]</p>
+            </div>
+    </div>
+
+    <div class="section section-dark">
+        <h2>Información Práctica</h2>
+        <div style="display: flex; justify-content: space-around; max-width: 800px; margin: 0 auto;">
+            <div style="width: 30%;">
+                <h3>Lista de Regalos</h3>
+                <p>Tu presencia es nuestro mejor regalo. Si deseas contribuir con nuestra Luna de Miel, puedes hacerlo aquí:</p>
+                <a href="https://www.evento.love/blog/reflexiones-de-una-wedding-planner-la-lista-de-bodas-vs-cuenta-bancaria/amp/" target="_blank" class="btn" style="background-color: var(--color-acento);">Ver Detalles</a>
+            </div>
+            <div style="width: 30%;">
+                <h3>Código de Vestimenta</h3>
+                <p>Elegante sport. Queremos que estés cómodo, pero que la ocasión sea especial. Evitar el color blanco.</p>
+            </div>
+            <div style="width: 30%;">
+                <h3>Alojamiento</h3>
+                <p>Hemos reservado tarifas especiales en los hoteles cercanos.</p>
+                <a href="https://www.hoteles.com/" target="_blank" class="btn" style="background-color: var(--color-acento);">Ver Hoteles</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Septiembre 2026 | Hecho con amor por Andrés & Melisa</p>
+    </div>
+
+    <script>
+        // Configura la fecha de la boda (Año, Mes-1, Día, Hora)
+        // Nota: Septiembre es el mes 8 en JavaScript (Enero=0, Diciembre=11)
+        const weddingDate = new Date("September 21, 2026 17:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + " días | " + hours + " hs | "
+            + minutes + " min | " + seconds + " seg";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡ES HOY!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
