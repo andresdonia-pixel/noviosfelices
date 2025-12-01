@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés y Melisa | Boda Septiembre 2026</title>
+    <title>Andrés y Melisa | La Boda Más Descontracturada</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     
     <style>
         /* ESTILOS GENERALES Y RESETS */
         :root {
-            --color-principal: #384F41; /* Verde Oliva Oscuro, elegante */
-            --color-acento: #CDB78C; /* Dorado Suave / Beige */
+            --color-principal: #384F41; /* Verde Oliva Oscuro */
+            --color-acento: #FFC300; /* Amarillo/Dorado Vibrante, divertido */
             --color-fondo: #FFFFFF;
             --color-texto: #333333;
-            --font-serif: 'Lora', serif;
-            --font-sans: 'Montserrat', sans-serif;
+            --font-display: 'Dancing Script', cursive; /* Para títulos */
+            --font-body: 'Montserrat', sans-serif; /* Para texto */
         }
 
         body {
-            font-family: var(--font-sans);
+            font-family: var(--font-body);
             color: var(--color-texto);
             margin: 0;
             padding: 0;
@@ -29,12 +29,14 @@
         }
 
         h1, h2, h3 {
-            font-family: var(--font-serif);
+            font-family: var(--font-display);
             color: var(--color-principal);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 20px;
         }
+        h1 { font-size: 4.5rem; }
+        h2 { font-size: 3rem; }
+        h3 { font-size: 1.8rem; }
 
         a {
             color: var(--color-acento);
@@ -43,7 +45,8 @@
         
         /* SECCIÓN PRINCIPAL (LANDING) */
         .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/1200/800?random=1') no-repeat center center/cover; /* Reemplazar con una foto de Andrés y Melisa */
+            /* REEMPLAZA ESTA URL con una foto divertida de ustedes dos */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/1200/800?random=1') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -51,23 +54,23 @@
             align-items: center;
             color: white;
             padding: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
         }
 
         .header h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            font-family: var(--font-display);
         }
 
         .header p {
-            font-size: 1.5rem;
-            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-family: var(--font-body);
             margin-top: 0;
         }
 
         .fecha {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-top: 15px;
             color: var(--color-acento);
@@ -82,32 +85,30 @@
         .section-light {
             background-color: #f9f9f9;
         }
+        
+        /* TABLA DE CRONOGRAMA */
+        .cronograma-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-        .section-dark {
+        .cronograma-table th, .cronograma-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cronograma-table th {
+            width: 25%;
             background-color: var(--color-principal);
             color: white;
-        }
-
-        .section-dark h2, .section-dark h3 {
-            color: white;
-        }
-        
-        .story-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .story-point {
-            margin-bottom: 30px;
-            padding-left: 20px;
-            border-left: 3px solid var(--color-acento);
-        }
-
-        .story-point h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 1.5rem;
+            font-family: var(--font-body);
+            font-weight: 700;
         }
         
         /* BOTONES Y LLAMADAS A LA ACCIÓN */
@@ -116,27 +117,28 @@
             background-color: var(--color-acento);
             color: white !important;
             padding: 10px 30px;
-            margin: 10px;
-            border-radius: 5px;
+            margin: 20px 10px;
+            border-radius: 50px; 
             font-weight: 700;
             text-transform: uppercase;
             transition: background-color 0.3s;
+            font-family: var(--font-body);
         }
 
         .btn:hover {
             background-color: var(--color-principal);
         }
 
-        /* CONTADOR REGRESIVO (Básico) */
+        /* CONTADOR REGRESIVO */
         #countdown {
-            font-family: var(--font-sans);
+            font-family: var(--font-body);
             font-size: 2rem;
             font-weight: 700;
             margin-top: 20px;
             color: var(--color-acento);
         }
         
-        /* RSVP IFRAME (Diseño para Google Forms o Typeform) */
+        /* RSVP IFRAME */
         .rsvp-container {
             max-width: 700px;
             margin: 0 auto;
@@ -145,8 +147,8 @@
 
         .rsvp-container iframe {
             width: 100%;
-            height: 600px; /* Ajusta esta altura según sea necesario */
-            border: 1px solid #ccc;
+            height: 600px; 
+            border: 2px dashed var(--color-acento); 
             border-radius: 8px;
         }
         
@@ -158,19 +160,30 @@
             font-size: 0.9rem;
         }
 
+        /* Historia */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding-top: 20px;
+        }
+        
+        .story-point {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 2px solid var(--color-acento);
+        }
+        
         /* Media Queries para Responsive Design (móviles) */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 3rem;
             }
-            .header p {
-                font-size: 1.2rem;
+            .cronograma-table th, .cronograma-table td {
+                padding: 10px;
             }
-            #countdown {
-                font-size: 1.5rem;
-            }
-            .section {
-                padding: 40px 5%;
+            .cronograma-table {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -178,88 +191,115 @@
 <body>
 
     <div class="header">
-        <p>¡Por Fin, el Sí!</p>
+        <p style="font-size: 2rem;">¡Al fin pasa!</p>
         <h1>Andrés & Melisa</h1>
+        <p>¡Nos Casamos! (Sí, de verdad, después de ese ramo de chipá)</p>
         <div class="fecha">Septiembre 2026</div>
         
         <p id="countdown">Cargando...</p>
     </div>
 
-    <div class="section section-light">
-        <h2>Nuestro Viaje: De Instagram a Ezeiza</h2>
-        <div class="story-container">
-            <div class="story-point">
-                <h3>El Cruce Digital</h3>
-                <p>Nuestra historia comenzó con un "me gusta" y se convirtió en noches enteras de charlas que cruzaron el hemisferio. El chat era largo, la conexión inmediata, y la promesa de un encuentro cada vez más fuerte.</p>
-            </div>
-            <div class="story-point">
-                <h3>El Ramo de Chipá (21/09/2022)</h3>
-                <p>Andrés aterrizó en Ezeiza sin imaginar la sorpresa que lo esperaba. Melisa estaba ahí. Un flechazo de película, pero con un toque muy nuestro: en lugar de flores, Melisa me entregó un **ramo de chipá**. En ese instante, supimos que esta historia sería única, deliciosa y real.</p>
-            </div>
-            <div class="story-point">
-                <h3>El Flechazo Perpetuo</h3>
-                <p>Desde ese 21 de septiembre, nuestras vidas se entrelazaron. Cada día ha sido un capítulo de aventuras, risas y confirmaciones de que el destino, efectivamente, nos había esperado en una sala de arribos. Por eso, elegimos Septiembre de 2026 para cerrar el círculo, celebrando nuestro amor en alusión al día en que todo cambió.</p>
-            </div>
-        </div>
-    </div>
-
     <div class="section">
-        <h2>El Gran Día</h2>
-        <div style="max-width: 600px; margin: 0 auto; display: flex; justify-content: space-around;">
-            <div>
-                <h3>Ceremonia</h3>
-                <p>**[Nombre del Lugar de la Ceremonia]**</p>
-                <p>Hora: 17:00 hs.</p>
-                <p>[Dirección corta]</p>
-            </div>
-            <div>
-                <h3>Recepción</h3>
-                <p>**[Nombre del Salón de Fiestas]**</p>
-                <p>Hora: 19:00 hs.</p>
-                <p>[Dirección corta]</p>
-            </div>
-        </div>
-        <a href="https://support.google.com/maps/answer/3092445?hl=es&co=GENIE.Platform%3DDesktop" target="_blank" class="btn">Ver Ubicación en el Mapa</a>
+        <h2>Cronograma de Sobrevivencia</h2>
+        <p>Apunta bien los horarios para que no te pierdas el catering. Es fundamental.</p>
+        <table class="cronograma-table">
+            <tr>
+                <th>Hora</th>
+                <th>Evento Clave</th>
+                <th>Instrucciones Descontracturadas</th>
+            </tr>
+            <tr>
+                <td>12:30</td>
+                <td>Recepción & Previa</td>
+                <td>**"El Calentamiento"**: Llega puntual. Te recibiremos con unas bebidas para calentar motores. Si llegas tarde, el chipá se lo come Melisa.</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Ceremonia</td>
+                <td>**"El Momento del 'Sí, Quiero'"**: Dura poco, es emocionante. Cero móviles encendidos y cero interrupciones. ¡Tenemos hambre!</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Comida/Almuerzo</td>
+                <td>**"La Carga de Carbohidratos"**: Hora de llenar el estómago y recuperar energías. ¡A comer y a brindar por el matrimonio!</td>
+            </tr>
+            <tr>
+                <td>16:00</td>
+                <td>Baile & Fiesta</td>
+                <td>**"¡A Mover el Esqueleto!"**: Si no sabes bailar, no importa. Lo importante es el esfuerzo. ¡Prohibido estar sentado!</td>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <td>Fin de Fiesta</td>
+                <td>**"¡Hasta Luego, Luces!"**: Se acabó lo bueno. Hora de volver a casa, felices, cansados y con los zapatos destrozados.</td>
+            </tr>
+        </table>
     </div>
     
     <div class="section section-light">
-        <h2>¡Confirma tu Asistencia!</h2>
-        <p>Por favor, ayúdanos a planificar la celebración confirmando tu presencia y la de tus acompañantes antes del **[Fecha Límite - Ejemplo: 15 de Agosto de 2026]**.</p>
+        <h2>¡Confirmá antes de que te quedes sin silla!</h2>
+        <p>Por favor, confirma tu asistencia (y la de tus acompañantes) lo antes posible. ¡Necesitamos saber cuántos platos de comida pedir!.</p>
         
         <div class="rsvp-container">
             <iframe src="[AQUÍ VA EL ENLACE PÚBLICO DEL FORMULARIO DE GOOGLE FORMS]" frameborder="0" style="width:100%; height:600px; border:0;" allowfullscreen></iframe>
-            <p>Si tienes problemas con el formulario, escríbenos a [Tu Email]</p>
+            <p>Si tienes problemas con el formulario, envíanos un WhatsApp.</p>
             </div>
     </div>
 
-    <div class="section section-dark">
-        <h2>Información Práctica</h2>
-        <div style="display: flex; justify-content: space-around; max-width: 800px; margin: 0 auto;">
-            <div style="width: 30%;">
-                <h3>Lista de Regalos</h3>
-                <p>Tu presencia es nuestro mejor regalo. Si deseas contribuir con nuestra Luna de Miel, puedes hacerlo aquí:</p>
-                <a href="https://www.evento.love/blog/reflexiones-de-una-wedding-planner-la-lista-de-bodas-vs-cuenta-bancaria/amp/" target="_blank" class="btn" style="background-color: var(--color-acento);">Ver Detalles</a>
+    <div class="section">
+        <h2>Regalos: El Dilema y la Sinceridad</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; font-weight: 700;">
+                Lo más importante para nosotros es que vengas y compartas este día. Punto.
+            </p>
+            <p>
+                Si tienes la posibilidad y la voluntad de hacernos un regalo, cualquier ayuda económica es bienvenida para nuestra luna de miel. Pero queremos ser **totalmente honestos y claros**:
+            </p>
+            <p style="background-color: var(--color-acento); color: white; padding: 15px; border-radius: 5px;">
+                **Sabemos que hay momentos difíciles en la vida. Si no puedes o no quieres hacer un regalo, ¡NO PASA NADA! Ven igual, celebra con nosotros y ya estarás haciendo el mejor de los regalos.**
+            </p>
+            <p>¡El cariño es lo que vale!</p>
+            <a href="https://www.xataka.com/basics/bizum-vs-paypal-diferencias-cual-utilizar-para-enviar-dinero-a-otra-persona" target="_blank" class="btn" style="background-color: var(--color-principal);">Ver Detalles de Regalo (Opcional)</a>
+        </div>
+    </div>
+
+    <div class="section section-light">
+        <h2>¿Cómo Llego Sin Perderme?</h2>
+        <p>La boda se celebrará en **[Nombre del Salón y Dirección]**. Por favor, usa el mapa para no tener que llamar a Andrés 5 minutos antes de la ceremonia.</p>
+        <a href="https://support.google.com/maps/answer/3092445?hl=es&co=GENIE.Platform%3DDesktop" target="_blank" class="btn">Abrir Google Maps</a>
+        <div style="margin-top: 20px;">
+            <iframe src="[CÓDIGO DE GOOGLE MAPS EMBEBIDO AQUÍ]" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Nuestra Historia: El Origen de la Locura</h2>
+        <div class="story-container">
+            <div class="story-point">
+                <h3>El Cruce de Fronteras Digitales</h3>
+                <p>Nuestra odisea comenzó con horas de mensajes que cruzaron el hemisferio. El chat era largo, la conexión inmediata, y la promesa de un encuentro cada vez más fuerte.</p>
             </div>
-            <div style="width: 30%;">
-                <h3>Código de Vestimenta</h3>
-                <p>Elegante sport. Queremos que estés cómodo, pero que la ocasión sea especial. Evitar el color blanco.</p>
+            <div class="story-point">
+                <h3>El Ramo de Chipá (21/09/2022)</h3>
+                <p>Andrés aterrizó en Ezeiza sin esperar la sorpresa. Melisa estaba ahí. Un flechazo con sabor a queso que nos demostró que nuestro amor iba a ser único, delicioso y real. Desde ese día, el mundo digital se quedó atrás.</p>
             </div>
-            <div style="width: 30%;">
-                <h3>Alojamiento</h3>
-                <p>Hemos reservado tarifas especiales en los hoteles cercanos.</p>
-                <a href="https://www.hoteles.com/" target="_blank" class="btn" style="background-color: var(--color-acento);">Ver Hoteles</a>
+            <div class="story-point">
+                <h3>Gracias por ser parte de nuestra historia. ¡Te esperamos!</h3>
+                <p style="font-size: 1.2rem; margin-top: 30px;">
+                    Elegimos Septiembre de 2026 para celebrar este amor. Cada uno de ustedes ha sido testigo de nuestro viaje, ¡así que prepárense para la fiesta!
+                </p>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>&copy; Septiembre 2026 | Hecho con amor por Andrés & Melisa</p>
+        <p>&copy; Septiembre 2026 | Hecho con mucho humor por Andrés & Melisa</p>
     </div>
 
     <script>
         // Configura la fecha de la boda (Año, Mes-1, Día, Hora)
         // Nota: Septiembre es el mes 8 en JavaScript (Enero=0, Diciembre=11)
-        const weddingDate = new Date("September 21, 2026 17:00:00").getTime();
+        const weddingDate = new Date("September 21, 2026 12:30:00").getTime(); // Usamos 12:30 para el inicio del evento
 
         const x = setInterval(function() {
             const now = new Date().getTime();
@@ -275,7 +315,7 @@
 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "¡ES HOY!";
+                document.getElementById("countdown").innerHTML = "¡ES HOY! ¡LLEGÁ TEMPRANO!";
             }
         }, 1000);
     </script>
